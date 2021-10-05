@@ -28,5 +28,18 @@ $(function() {
                 "color": "#1c2f40"
             });
         });
-
+    $(".hoverButton").hover(
+        function() {
+            $(this).css({
+                transition: 'background-color 0.5s ease-in-out',
+                "background-color": "#f2e9d8"
+            })
+        },
+        function() {
+            $(this).css({
+                transition: 'background-color 0.5s ease-in-out',
+                "background-color": "#8094a6"
+            })
+        }
+    )
 })
