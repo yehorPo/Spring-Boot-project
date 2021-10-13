@@ -47,7 +47,7 @@ $(function() {
             $(this).removeClass('font-lBrwn');
             $(this).css({
                 transition: 'background-color 0.5s ease-in-out, color 0.5s ease-in-out ',
-                "background-color": "#d9d1ba",
+                "background-color": "#8094a6",
                 "color": "#1c2f40"
             });
         },
