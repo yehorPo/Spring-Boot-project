@@ -2,18 +2,23 @@
 <html lang="en">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="jsgrid.min.css" />
+<link type="text/css" rel="stylesheet" href="jsgrid-theme.min.css" />
+
+<script type="text/javascript" src="jsgrid.min.js"></script>
 </head>
 
 <body class="bg-lBrwn">
-    <main>
-        <div class="col-4 sidebar">
-            <div class="d-flex flex-column flex-shrink-0 p-3 font-lBrwn bg-veryDB" style="width: 280px;">
+    <main style=" width:290%">
+        <div class="col-4 sidebar" style="float: left;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 font-lBrwn bg-veryDB" style="width: 280px; height: 450px;">
                 <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto font-lBrwn text-decoration-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
@@ -82,18 +87,60 @@
                         </li>
                     </ul>
                 </div>
+                
             </div>
+            <!--<div>Schedule</div>-->
+            <div id="jsGrid" style="float: left;"></div>
         </div>
+        
     </main>
-
-
-
-
-
-
-
-    <script src="js/jquery.js "></script>
+    
+    <!--<script src="js/jquery.js "></script>-->
     <script src="js/hover.js "></script>
     <script src="js/bootstrap.bundle.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js "></script>
+    <script>
+        var subjects = [
+            { "Name": "Теорія ймовірності", "Teacher`s name": "Михалевич В.", "Time": "9:00", "Link": "Ap #897-1459 Quam Avenue" },
+            { "Name": "Штучний інтелект", "Teacher`s name": "Глибовець М.", "Time": "10:00", "Link": "Ap #897-1459 Quam Avenue" },
+            { "Name": "Математичний аналіз", "Teacher`s name": "Митник Ю.", "Time": "14:00", "Link": "Ap #897-1459 Quam Avenue" },
+            { "Name": "Java EE", "Teacher`s name": "Салата К.", "Time": "15:00", "Link": "Ap #897-1459 Quam Avenue" },
+            { "Name": "Веб-технології", "Teacher`s name": "Гречко А.", "Time": "16:00", "Link": "Ap #897-1459 Quam Avenue" },
+            { "Name": "Менеджмент", "Teacher`s name": "Іванов Д.", "Time": "18:00", "Link": "Ap #897-1459 Quam Avenue" },
+            { "Name": "Менеджмент", "Teacher`s name": "Іванов Д.", "Time": "19:00", "Link": "Ap #897-1459 Quam Avenue" }
+        ];
+        var sub2=[
+        { "Name": "Штучний інтелект", "Teacher`s name": "Глибовець М.", "Time": "10:00", "Link": "Ap #897-1459 Quam Avenue" }
+        ];
+        $("#jsGrid").jsGrid({
+            width: "100%",
+            editing: true,
+            sorting: true,
+            paging: true,
+            controller: {
+        loadData: function() {
+            return subjects;
+        }
+    },
+    headerRowRenderer: function() {
+        /*var $result = $("<tr>").height(0);*/
+            
+       var $result = ($("<tr>")
+            .append($("<th>").attr("colspan", 1).text("Name"))
+            .append($("<th>").text("Teacher`s name"))
+            .append($("<th>").text("Time"))
+            .append($("<th>").text("Link")))
+            .add($("<tr id=frg>").height(50).text("Monday"));
+                return $result;
+    },
+            data: subjects,
+            fields: [
+                { name: "Name",  validate: "required" },
+                { name: "Teacher`s name" },
+                { name: "Time"},
+                { name: "Link" },
+            ]
+        });
+    </script>
+    
 </body>

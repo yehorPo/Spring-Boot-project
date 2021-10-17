@@ -118,3 +118,18 @@ html {
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+
+
+
+#frg {
+    padding: 0;
+    border:none;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.jsgrid tr th {
+    border: 1px solid #e9e9e9;
+}
