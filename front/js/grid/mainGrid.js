@@ -1,28 +1,19 @@
+function createGrid(data){
+    $("#jsGrid1").jsGrid({
+        width: "100%",
+        sorting: true,
+        paging: true,
+        editing: false,
+        data: data,
+        fields: [
+            { name: "name", title: "Name", type: "text" },
+            { name: "t_name", title: "Teacher`s name", type: "text" },
+            { name: "time", title: "Time", type: "text" },
+            { name: "link", title: "Link", type: "text" }
+        ]
+    }); 
+}
 $(function(){
-    // let subjects = [
-    //     { "Name": "Теорія ймовірності", "Teacher`s name": "Михалевич В.", "Time": "9:00", "Link": "Ap #897-1459 Quam Avenue" },
-    //     { "Name": "Штучний інтелект", "Teacher`s name": "Глибовець М.", "Time": "10:00", "Link": "Ap #897-1459 Quam Avenue" },
-    //     { "Name": "Математичний аналіз", "Teacher`s name": "Митник Ю.", "Time": "14:00", "Link": "Ap #897-1459 Quam Avenue" },
-    //     { "Name": "Java EE", "Teacher`s name": "Салата К.", "Time": "15:00", "Link": "Ap #897-1459 Quam Avenue" },
-    //     { "Name": "Веб-технології", "Teacher`s name": "Гречко А.", "Time": "16:00", "Link": "Ap #897-1459 Quam Avenue" },
-    //     { "Name": "Менеджмент", "Teacher`s name": "Іванов Д.", "Time": "18:00", "Link": "Ap #897-1459 Quam Avenue" },
-    //     { "Name": "Менеджмент", "Teacher`s name": "Іванов Д.", "Time": "19:00", "Link": "Ap #897-1459 Quam Avenue" }
-    // ];
-    function createGrid(data){
-        $("#jsGrid1").jsGrid({
-            width: "100%",
-            sorting: true,
-            paging: true,
-            editing: false,
-            data: data,
-            fields: [
-                { name: "name", title: "Name", type: "text" },
-                { name: "t_name", title: "Teacher`s name", type: "text" },
-                { name: "time", title: "Time", type: "text" },
-                { name: "link", title: "Link", type: "text" }
-            ]
-        }); 
-    }
     let data1 = [
         {name: "Monday", t_name: "Monday", time: "Monday", link: "Monday"}
     ];
