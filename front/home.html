@@ -1,31 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/grid/jsgrid.css" rel="stylesheet">
+    <link href="css/grid/jsgrid-theme.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="jsgrid.min.css" />
-<link type="text/css" rel="stylesheet" href="jsgrid-theme.min.css" />
-
 <script type="text/javascript" src="jsgrid.min.js"></script>
 </head>
-
 <body class="bg-lBrwn">
-    <main style=" width:290%">
-        <div class="col-4 sidebar" style="float: left;">
-            <div class="d-flex flex-column flex-shrink-0 p-3 font-lBrwn bg-veryDB" style="width: 280px; height: 450px;">
-                <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto font-lBrwn text-decoration-none">
+    <main>
+        <div class="row">
+        <div class="col-auto sidebar">
+            <div class="d-flex flex-column flex-shrink-0 p-3 font-lBrwn bg-veryDB" style="width: 280px;">
+                <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto font-lBrwn text-decoration-none text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                       </svg>
-                    <h2 class="fs-4 text-center p-2">Menu</h2>
+                    <h2> Menu</h2>
                 </a>
                 <hr>
+                <div class="dropdown">
+                    <a class="d-flex align-items-center font-lBrwn text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <h4 class="fs-4 p-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+                            <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                          </svg>
+                            Schedule</h4>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu text-small shadow bg-veryDB" aria-labelledby="dropdownUser1">
+                        <li>
+                            <a class="nav-link font-lBrwn hoverA" id="monday">
+                                Monday
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link font-lBrwn hoverA" id="tuesday">
+                                Tuesday
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link font-lBrwn hoverA" id="wednesday">
+                                Wednesday
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link font-lBrwn hoverA" id="thursday">
+                                Thursday
+                            </a>
+                        </li><li>
+                            <a class="nav-link font-lBrwn hoverA" id="friday">
+                                Friday
+                            </a>
+                        </li><li>
+                            <a class="nav-link font-lBrwn hoverA" id="saturday">
+                                Saturday
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <h4 class="fs-4 p-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                    <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                    <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+                  </svg>
+                    Navigations</h4>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
                         <a href="#" class="nav-link bg-b font-veryDB" aria-current="page">
@@ -87,60 +128,26 @@
                         </li>
                     </ul>
                 </div>
-                
             </div>
-            <!--<div>Schedule</div>-->
-            <div id="jsGrid" style="float: left;"></div>
         </div>
-        
-    </main>
+        <div class="col-9 text-center">
+            <br>
+            <br>
+            <h2 class=" badge bg-veryDB special font-brwn">Schedule</h2>
+            <h2 id="day"></h2>
+            <div class="container-fluid" id="jsGrid1">
+
+            <!-- show data here -->
     
-    <!--<script src="js/jquery.js "></script>-->
+            </div>
+        </div>
+    </div>
+    </main>
+    <script src="js/jquery.js "></script>
     <script src="js/hover.js "></script>
     <script src="js/bootstrap.bundle.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js "></script>
-    <script>
-        var subjects = [
-            { "Name": "Теорія ймовірності", "Teacher`s name": "Михалевич В.", "Time": "9:00", "Link": "Ap #897-1459 Quam Avenue" },
-            { "Name": "Штучний інтелект", "Teacher`s name": "Глибовець М.", "Time": "10:00", "Link": "Ap #897-1459 Quam Avenue" },
-            { "Name": "Математичний аналіз", "Teacher`s name": "Митник Ю.", "Time": "14:00", "Link": "Ap #897-1459 Quam Avenue" },
-            { "Name": "Java EE", "Teacher`s name": "Салата К.", "Time": "15:00", "Link": "Ap #897-1459 Quam Avenue" },
-            { "Name": "Веб-технології", "Teacher`s name": "Гречко А.", "Time": "16:00", "Link": "Ap #897-1459 Quam Avenue" },
-            { "Name": "Менеджмент", "Teacher`s name": "Іванов Д.", "Time": "18:00", "Link": "Ap #897-1459 Quam Avenue" },
-            { "Name": "Менеджмент", "Teacher`s name": "Іванов Д.", "Time": "19:00", "Link": "Ap #897-1459 Quam Avenue" }
-        ];
-        var sub2=[
-        { "Name": "Штучний інтелект", "Teacher`s name": "Глибовець М.", "Time": "10:00", "Link": "Ap #897-1459 Quam Avenue" }
-        ];
-        $("#jsGrid").jsGrid({
-            width: "100%",
-            editing: true,
-            sorting: true,
-            paging: true,
-            controller: {
-        loadData: function() {
-            return subjects;
-        }
-    },
-    headerRowRenderer: function() {
-        /*var $result = $("<tr>").height(0);*/
-            
-       var $result = ($("<tr>")
-            .append($("<th>").attr("colspan", 1).text("Name"))
-            .append($("<th>").text("Teacher`s name"))
-            .append($("<th>").text("Time"))
-            .append($("<th>").text("Link")))
-            .add($("<tr id=frg>").height(50).text("Monday"));
-                return $result;
-    },
-            data: subjects,
-            fields: [
-                { name: "Name",  validate: "required" },
-                { name: "Teacher`s name" },
-                { name: "Time"},
-                { name: "Link" },
-            ]
-        });
-    </script>
-    
-</body>
+    <script src="js/grid/jsgrid.js"></script>
+    <script src="js/grid/mainGrid.js"></script>
+    </body>
+</html>

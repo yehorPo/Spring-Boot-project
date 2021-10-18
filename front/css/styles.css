@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
+
+.special {
+    width: auto;
+    margin-top: -1.15em;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+    color: #1c2f40;
+    text-align: center;
+}
+
 .bg-veryDB {
     background-color: #1c2f40 !important;
 }
@@ -118,9 +129,6 @@ html {
     overflow-x: auto;
     overflow-y: hidden;
 }
-
-
-
 
 #frg {
     padding: 0;
