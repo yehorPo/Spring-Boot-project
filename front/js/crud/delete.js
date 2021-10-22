@@ -4,12 +4,7 @@ let data = [
 ]
 
 $(function(){
-    $("#name").focus(function(){
-        $(this).empty(); 
-        for(let i = 0; i<data.length; i++){
-            $(this).append(`<option id="`+data[i].groups+`" value="`+data[i].course_id+`">`+data[i].name+`</option>`)
-        }
-    });
+    init(data);
     $("#form").on("submit", function(event) {
         event.preventDefault();
         let urlencoded = $("#form").serialize();
